@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+@layer components {
+  .snap-feature {
+    @apply snap-y snap-mandatory h-screen overflow-scroll scroll-smooth;
+  }
+  .nav-items {
+    @apply text-2xl font-semibold text-slate-900 py-2 px-5 rounded-[1.2rem] hover:bg-slate-400 duration-500;
+  }
+  .car {
+    @apply w-full h-screen relative;
+  }
+  .car-img {
+    @apply w-full h-full object-cover snap-always snap-start;
+  }
+  .car-details {
+    @apply absolute top-[20%] left-[50%]  translate-y-[-50%] translate-x-[-50%] text-center;
+  }
+  .car-name {
+    @apply text-[4rem] font-semibold;
+  }
+  .car-tag {
+    @apply text-2xl;
+  }
+  .btn {
+    @apply absolute bottom-[10%] left-[50%] translate-y-[-50%] translate-x-[-50%]  text-center mt-3;
+  }
+  .btn-1 {
+    @apply inline-block text-xl font-medium mx-2 text-white rounded-[10rem] bg-gray-700 w-[25rem] my-2 h-16 pt-4 px-10;
+  }
+  .btn-2 {
+    @apply text-gray-900 bg-slate-100;
+  }
+  .down-arrow {
+    @apply absolute bottom-[5%]  left-[50%] translate-y-[-50%] translate-x-[-50%] animate-bounce;
+  }
+  .Solarpanel {
+    @apply w-full h-screen text-white;
+  }
+}
